@@ -17,4 +17,6 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+
 项目基于 vue、vuex、element-UI、axios 等技术
