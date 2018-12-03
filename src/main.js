@@ -8,7 +8,8 @@ import Cookies from 'js-cookie';
 import store from './store';
 import i18n from './lang'; //导入语言
 import './premission'; //权限控制
-
+import 'normalize.css/normalize.css' //用来格式化css
+import './assets/iconfont/iconfont' //引入iconfont.js
 // 引入element-UI框架
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
