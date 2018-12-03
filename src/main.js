@@ -18,6 +18,7 @@ Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value) //兼容vue-i18n@6.x
 });
 
+import 'babel-polyfill';  //兼容性需求
 
 
 Vue.config.productionTip = false
