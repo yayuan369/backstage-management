@@ -1,23 +1,30 @@
 <template>
-  <div>空掉漏水看出来的</div>
+    <div class="dashboard-container">
+        <div class="dashboard-text">name:{{ name }}</div>
+        <div class="dashboard-text">roles:
+            <span v-for="role in roles" :key="role">{{ role }}</span>
+        </div>
+    </div>
 </template>
 
+
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  data () {
-    return {
-    };
-  },
-
-  components: {},
-
-  mounted() {},
-
-  methods: {},
-
-  computed: {}
-}
-
+  name: "Dashboard",
+  computed: {
+    ...mapGetters(["name", "roles"])
+  }
+};
 </script>
-<style lang='less' scoped>
+
+<style lang="less" scoped>
+.dashboard-container {
+  margin: 30px;
+}
+.dashboard-text {
+  font-size: 30px;
+  line-height: 46px;
+}
 </style>
