@@ -6,7 +6,7 @@ import {
 import store from '../store'
 import {
   getToken
-} from './auth';
+} from '@/utils/auth';
 
 
 
@@ -71,3 +71,5 @@ service.interceptors.response.use(
       return Promise.reject(error);
   }
 )
+
+export default service
