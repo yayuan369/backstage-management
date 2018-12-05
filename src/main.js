@@ -18,10 +18,11 @@ Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value) //兼容vue-i18n@6.x
 });
 
-
+// svg组件
+import SvgIcon from '@/components/SvgIcon'
+Vue.component('svg-icon', SvgIcon);
 
 import '@/styles/index.less' // 全局 css
-import './icons';
 
 
 

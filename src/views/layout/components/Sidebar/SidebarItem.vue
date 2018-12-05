@@ -1,6 +1,7 @@
 <template>
     <div v-if="!item.hidden && item.children" class="menu-wrapper">
         <!-- 仅有一个孩纸 -->
+        <!-- alwaysShow: true，会忽略之前定义的规则，一直显示根路由 -->
         <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children || onlyOneChild.noShowingChildren) && !item.alwaysShow">
             <app-link :to="resolvePath(onlyOneChild.path)">
                 <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
@@ -24,6 +25,24 @@
                 </app-link>
             </template>
         </el-submenu>
+
+        <!-- <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect" unique-opened router v-if="!collapsed">
+            <template v-for="(item, index) in $router.options.routes" v-if="!item.hidden">
+                <el-submenu :index="index+''" v-if="!item.leaf">
+                    <template slot="title">
+                        <i :class="item.iconCls"></i>
+                        {{ item.name }}
+                    </template>
+                    <el-menu-item v-for="child in item.children" :index="child.path" v-if="!child.hidden" :key="child.path">
+                        {{ child.name }}
+                    </el-menu-item>
+                </el-submenu>
+                <el-menu-item v-if="item.leaf && item.children.length" :index="item.children[0].path">
+                    <i :class="item.iconCls"></i>
+                    {{ item.children[0].name }}
+                </el-menu-item>
+            </template>
+        </el-menu> -->
     </div>
 </template>
 

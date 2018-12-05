@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     iconName() {
-      return `#icon-${this.iconClass}`;
+      return `${this.iconClass}`;
     },
     svgClass() {
       if (this.className) {

@@ -6,7 +6,8 @@ Vue.use(Router)
 // 页面布局
 import Layout from '@/views/layout/lauout.vue'
 
-export const constantRouterMap = [{
+export const constantRouterMap = [
+  {
     path: '/login',
     component: () => import('@/views/login/index.vue'),
     hidden: true
@@ -32,7 +33,7 @@ export const constantRouterMap = [{
     name: 'Example',
     meta: {
       title: 'Example',
-      icon: 'example'
+      icon: '#icon-daizhenhuanzhe'
     },
     children: [{
         path: 'table',
@@ -40,7 +41,7 @@ export const constantRouterMap = [{
         component: () => import('@/views/example/table/index'),
         meta: {
           title: 'Table',
-          icon: 'table'
+          icon: '#icon-huiyuanquanyi'
         }
       },
       {
@@ -49,7 +50,7 @@ export const constantRouterMap = [{
         component: () => import('@/views/example/tree/index'),
         meta: {
           title: 'Tree',  //设置该路由在侧边栏和面包屑中展示的名字
-          icon: 'tree'  //设置该路由的图标
+          icon: '#icon-gerenxinxi2'  //设置该路由的图标
         }
       }
     ]
