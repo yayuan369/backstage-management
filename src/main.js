@@ -14,7 +14,7 @@ import './assets/iconfont/iconfont' //引入iconfont.js
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-
+import '@/styles/index.less' // 全局 css
 import './icons';
 Vue.use(ElementUI, {
   size: Cookies.get('size') || 'medium', //设置element-UI自适应尺寸
