@@ -13,13 +13,17 @@ import './assets/iconfont/iconfont' //引入iconfont.js
 // 引入element-UI框架
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
-import '@/styles/index.less' // 全局 css
-import './icons';
 Vue.use(ElementUI, {
   size: Cookies.get('size') || 'medium', //设置element-UI自适应尺寸
   i18n: (key, value) => i18n.t(key, value) //兼容vue-i18n@6.x
 });
+
+
+
+import '@/styles/index.less' // 全局 css
+import './icons';
+
+
 
 import 'babel-polyfill';  //兼容性需求
 
