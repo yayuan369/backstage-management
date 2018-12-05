@@ -41,7 +41,7 @@ export const constantRouterMap = [
         component: () => import('@/views/example/table/index'),
         meta: {
           title: 'Table',
-          icon: '#icon-huiyuanquanyi'
+          icon: '#icon-huiyuan'
         }
       },
       {
@@ -50,7 +50,7 @@ export const constantRouterMap = [
         component: () => import('@/views/example/tree/index'),
         meta: {
           title: 'Tree',  //设置该路由在侧边栏和面包屑中展示的名字
-          icon: '#icon-gerenxinxi2'  //设置该路由的图标
+          icon: '#icon-huiyuanquanyi'  //设置该路由的图标
         }
       }
     ]

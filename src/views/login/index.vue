@@ -4,7 +4,7 @@
       <h3 class="title">backstage-management</h3>
       <el-form-item prop="username">
         <span class="svg-container">
-          <svg-icon icon-class="#icon-gerenxinxi2" />
+          <svg-icon icon-class="#icon-gerenxinxi" />
         </span>
         <el-input v-model="loginForm.username" name="username" type="text" auto-complete="on" placeholder="username" />
       </el-form-item>
@@ -20,7 +20,7 @@
           placeholder="password"
           @keyup.enter.native="handleLogin" />
         <span class="show-pwd" @click="showPwd">
-          <svg-icon icon-class="eye" />
+          <svg-icon icon-class="#icon-biyan" />
         </span>
       </el-form-item>
       <el-form-item>
@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import SvgIcon from '../../components/SvgIcon'
 import { isvalidUsername } from '@/utils/validate'
 
 export default {
