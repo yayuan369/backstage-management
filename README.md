@@ -19,7 +19,8 @@ npm run build --report
 ```
 
 
-项目基于 vue、vuex、element-UI、axios 等技术
+```项目基于 vue、vuex、element-UI、axios 等技术,使用了阿里的iconfont图标```
+
 
 侧边栏菜单的路由icon
 
