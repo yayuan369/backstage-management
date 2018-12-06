@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:25:40
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-06 15:02:54
+ * @LastEditTime: 2018-12-06 16:00:34
  * @Description: 
  */
 
@@ -33,7 +33,6 @@ router.beforeEach((to,from,next) => {
     NProgress.start();  //开始
     // 确定是否有 token
     if(getToken()){
-        console.log('路劲--',to.path);
         if(to.path === '/login'){
             next({path:'/'});
             NProgress.done();   //如果当前页面是dashboard将不会触发afterEach挂钩，所以手动处理它

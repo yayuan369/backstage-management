@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-06 15:23:36
+ * @LastEditTime: 2018-12-06 15:26:54
  * @Description: 
  */
 
@@ -84,7 +84,8 @@ export const asyncRouterMap = [
         name: 'DirectivePermission',
         meta: {
           title: '用户权限',
-          icon:'#icon-gerenxinxi'
+          icon:'#icon-gerenxinxi',
+          noCache: true // 不会被 <keep-alive> 缓存
         }
       }
     ]
