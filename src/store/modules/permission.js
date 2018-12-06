@@ -1,7 +1,4 @@
-import {
-  asyncRouterMap,
-  constantRouterMap
-} from '@/router'
+import {  asyncRouterMap,  constantRouterMap} from '@/router'
 import {
   resolve
 } from '../../../node_modules/_uri-js@4.2.2@uri-js';
@@ -25,8 +22,7 @@ function hasPermission(roles, route) {
 function filterAsyncRouter(routes, roles) {
   const res = [];
   routes.forEach(route => {
-    const temp = { ...route
-    };
+    const temp = { ...route };
     if (hasPermission(roles, temp)) {
       if (temp.children) {
         temp.children = filterAsyncRouter(temp.children, roles);
@@ -48,9 +44,7 @@ const permission = {
     }
   },
   actions: {
-    GenerateRoutes({
-      commit
-    }, data) {
+    GenerateRoutes({ commit }, data) {
       return new Promise(resolve => {
         const { roles } = data;
         let accessedRouters;

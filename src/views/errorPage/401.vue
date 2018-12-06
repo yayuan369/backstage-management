@@ -1,5 +1,5 @@
 <template>
-  <div>后视镜快车道</div>
+  <div>我是401</div>
 </template>
 
 <script>

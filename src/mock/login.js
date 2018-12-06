@@ -2,7 +2,7 @@ import {
   param2Obj
 } from '@/utils'
 
-const useMap = {
+const userMap = {
   admin: {
     roles: ['admin'],
     token: 'admin',

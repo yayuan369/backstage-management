@@ -1,3 +1,12 @@
+/*
+ * @Author: jing lijuan
+ * @Date: 2018-11-30 14:25:40
+ * @LastEditors: jing lijuan
+ * @LastEditTime: 2018-12-06 15:02:54
+ * @Description: 
+ */
+
+
 // 权限管理
 import router from './router'
 import store from './store'
@@ -24,6 +33,7 @@ router.beforeEach((to,from,next) => {
     NProgress.start();  //开始
     // 确定是否有 token
     if(getToken()){
+        console.log('路劲--',to.path);
         if(to.path === '/login'){
             next({path:'/'});
             NProgress.done();   //如果当前页面是dashboard将不会触发afterEach挂钩，所以手动处理它
@@ -33,9 +43,10 @@ router.beforeEach((to,from,next) => {
                 store.dispatch('GetUserInfo')
                 .then(res=>{
                     const roles = res.data.roles;   //such as: ['editor','develop']
+                    
                     store.dispatch('GenerateRoutes',{roles})// 根据roles权限生成可访问的路由表
                     .then(()=>{
-                        router.addRoutes(store.getters.addRoutes);  //动态添加可访问路由
+                        router.addRoutes(store.getters.addRouters);  //动态添加可访问路由
                         next({ ...to, replace: true }); //hack方法 确保addRoutes已完成,设置replace：true，这样导航就不会留下历史记录
                     })
                 })

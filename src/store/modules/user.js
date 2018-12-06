@@ -19,12 +19,15 @@ const user = {
     SET_NAME: (state, name) => {
       state.name = name;
     },
+    SET_INTRODUCTION: (state, introduction) => {
+      state.introduction = introduction
+    },
     SET_AVATAR: (state, avatar) => {
       state.avatar = avatar;
     },
     SET_ROLES: (state, roles) => {
       state.roles = roles;
-    }
+    },
   },
   actions: {
     // 登录
