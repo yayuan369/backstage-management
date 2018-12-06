@@ -1,18 +1,18 @@
 import request from "@/utils/request";
 
 // 登录
-export function login(username, password) {
+export function loginByUsername(username, password) {
+  const data = {
+    username,
+    password
+  }
   return request({
-    url: '/user/login',
+    url: '/login/login',
     method: 'post',
-    data: {
-      username,
-      password
-    }
+    data
   })
 }
-
-export function getInfo(token) {
+export function getUserInfo(token) {
   return request({
     url: '/user/info',
     method: 'get',
@@ -24,7 +24,7 @@ export function getInfo(token) {
 // 登出
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: '/login/logout',
     method: 'post'
   })
 }

@@ -6,7 +6,9 @@ const app = {
       opened: !+Cookies.get('sidebarStatus'),
       withoutAnimation: false
     },
-    device: 'desktop'
+    device: 'desktop',
+    language: Cookies.get('language') || 'en',
+    size: Cookies.get('size') || 'medium'
   },
   //   mutation 必须是同步函数
   mutations: {
@@ -26,27 +28,33 @@ const app = {
     },
     TOGGLE_DEVICE: (state, device) => {
       state.device = device;
+    },
+    SET_LANGUAGE: (state, language) => {
+      state.language = language
+      Cookies.set('language', language)
+    },
+    SET_SIZE: (state, size) => {
+      state.size = size
+      Cookies.set('size', size)
     }
   },
   // action 提交的是 mutation，而不是直接变更状态。
   // action 可以包含任意异步操作
   actions: {
-    ToggleSideBar: ({
-      commit
-    }) => {
-      commit('TOGGLE_SIDEBAR');
+    toggleSideBar({ commit }) {
+      commit('TOGGLE_SIDEBAR')
     },
-    CloseSideBar({
-      commit
-    }, {
-      withoutAnimation
-    }) {
+    closeSideBar({ commit }, { withoutAnimation }) {
       commit('CLOSE_SIDEBAR', withoutAnimation)
     },
-    ToggleDevice({
-      commit
-    }, device) {
+    toggleDevice({ commit }, device) {
       commit('TOGGLE_DEVICE', device)
+    },
+    setLanguage({ commit }, language) {
+      commit('SET_LANGUAGE', language)
+    },
+    setSize({ commit }, size) {
+      commit('SET_SIZE', size)
     }
   }
 }
