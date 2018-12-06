@@ -20,6 +20,8 @@ npm run build --report
 
 
 ```项目基于 vue、vuex、element-UI、axios 等技术,使用了阿里的iconfont图标```
+
+
 小记:
 
 当我们在页面上点击一个按钮，它会触发(dispatch)一个action, action 随后会执行(commit)一个mutation, mutation 立即会改变state,  state 改变以后,我们的页面会state 获取数据，页面发生了变化;
