@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-06 15:26:54
+ * @LastEditTime: 2018-12-07 15:58:51
  * @Description: 
  */
 
@@ -95,22 +95,13 @@ export const asyncRouterMap = [
     path: '/example',
     name: 'Example',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '/example/tree',
     meta: {
       title: 'Example',
       icon: '#icon-daizhenhuanzhe',
       roles:['admin','editor'],
     },
-    children: [{
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/example/table/index'),
-        meta: {
-          title: 'Table',
-          roles:['admin'],
-          icon: '#icon-huiyuan'
-        }
-      },
+    children: [
       {
         path: 'tree',
         name: 'Tree',
