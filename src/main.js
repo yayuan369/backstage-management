@@ -25,6 +25,7 @@ Vue.component('svg-icon', SvgIcon);
 import '@/styles/index.less' // 全局 css
 
 
+import './mock' // 模拟接口返回的数据
 
 import 'babel-polyfill';  //兼容性需求
 

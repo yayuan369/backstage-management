@@ -1,5 +1,5 @@
 import Mock from 'mockjs'
-import loginApi from './login'
+import loginAPI from './login'
 
 
 
