@@ -26,6 +26,7 @@ npm run build --report
 
 当我们在页面上点击一个按钮，它会触发(dispatch)一个action, action 随后会执行(commit)一个mutation, mutation 立即会改变state,  state 改变以后,我们的页面会state 获取数据，页面发生了变化;
 state对象,是定义的一些变量,就是我们需要存储的变量
+mutations是用于修改state中属性的方法集合
 
 
 
