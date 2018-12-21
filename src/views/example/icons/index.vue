@@ -21,7 +21,7 @@ import clipboard from '@/utils/clipboard';
 export default {
   data () {
     return {
-      iconsMap:['#icon-daizhenhuanzhe','#icon-huiyuanquanyi']
+      iconsMap:['#icon-daizhenhuanzhe','#icon-huiyuanquanyi','#icon-setting-permissions','#icon-mysql','#icon-zuzhiqunzu','#icon-aixin','#icon-jingxuan','#icon-liwu','#icon-huo','#icon-biaoxingfill','#icon-jiaoyujiaofei','#icon-wodebaozhang','#icon-aixinjuanzeng','#icon-guojihuikuan','#icon-huiyuan','#icon-shezhi','#icon-gupiao','#icon-qinmifu']
     };
   },
 

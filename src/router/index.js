@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-21 11:22:25
+ * @LastEditTime: 2018-12-21 13:53:49
  * @Description: 
  */
 
@@ -64,20 +64,10 @@ export const asyncRouterMap = [
     alwaysShow:true,  //设置 alwaysShow: true，它就会忽略之前定义的规则，一直显示根路由
     meta:{
       title:'权限', //设置该路由在侧边栏和面包屑中展示的名字
-      icon:'#icon-huiyuanquanyi', //设置该路由的图标
+      icon:'#icon-setting-permissions', //设置该路由的图标
       roles:['admin','editor'], //设置该路由进入的权限，支持多个权限叠加
     },
     children:[
-      {
-        path:'page',
-        component:() => import('@/views/permission/page'),
-        name:'PagePermission',
-        meta:{
-          title:'页码',
-          roles:['admin'],
-          icon:'#icon-daizhenhuanzhe'
-        }
-      },
       {
         path: 'directive',
         component: () => import('@/views/permission/directive'),
@@ -86,6 +76,16 @@ export const asyncRouterMap = [
           title: '用户权限',
           icon:'#icon-gerenxinxi',
           noCache: true // 不会被 <keep-alive> 缓存
+        }
+      },
+      {
+        path:'page',
+        component:() => import('@/views/permission/page'),
+        name:'PagePermission',
+        meta:{
+          title:'页码',
+          roles:['admin'],
+          icon:'#icon-daizhenhuanzhe'
         }
       }
     ]
@@ -98,7 +98,7 @@ export const asyncRouterMap = [
     alwaysShow:true,
     meta: {
       title: '零星栗子',
-      icon: '#icon-daizhenhuanzhe',
+      icon: '#icon-zuzhiqunzu',
       roles:['admin','editor'],
     },
     children: [
@@ -108,7 +108,7 @@ export const asyncRouterMap = [
         component: () => import('@/views/example/icons/index'),
         meta: {
           title: 'Icons', //设置该路由在侧边栏和面包屑中展示的名字
-          icon: '#icon-huiyuanquanyi', //设置该路由的图标
+          icon: '#icon-biaoxingfill', //设置该路由的图标
           roles:['admin','editor']
         }
       }
