@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-21 13:53:49
+ * @LastEditTime: 2018-12-21 14:12:48
  * @Description: 
  */
 
@@ -32,17 +32,7 @@ export const constantRouterMap = [
   {
     path: '/login',
     component: () => import('@/views/login/index.vue'),
-    hidden: true
-  },
-  {
-    path: '/404',
-    component: () => import('@/views/errorPage/404'),
-    hidden: true  //当hidden设置 true 的时候该路由不会在侧边栏出现
-  },
-  {
-    path: '/401',
-    component: () => import('@/views/errorPage/401'),
-    hidden: true  //当hidden设置 true 的时候该路由不会在侧边栏出现
+    hidden: true    ////当hidden设置 true 的时候该路由不会在侧边栏出现
   },
   
 ]
@@ -114,4 +104,38 @@ export const asyncRouterMap = [
       }
     ]
   },
+  //401和404页面
+  {
+    path: '/errorPage',
+    name: 'errorPage',
+    component: Layout,
+    redirect: '/errorPage/401',
+    alwaysShow:true,
+    meta: {
+      title: 'bug',
+      icon: '#icon-bug',
+      roles:['admin','editor'],
+    },
+    children:[
+      {
+        path: '/401',
+        name:'401',
+        component: () => import('@/views/errorPage/401'),
+        meta: {
+          title: '401', //设置该路由在侧边栏和面包屑中展示的名字
+          roles:['admin','editor']
+        },
+        // hidden: true
+      },
+      {
+        path: '/404',
+        name: '404',
+        component: () => import('@/views/errorPage/404'),
+        meta: {
+          title: '404', //设置该路由在侧边栏和面包屑中展示的名字
+          roles:['admin','editor']
+        },
+      }
+    ]
+  }
 ]
