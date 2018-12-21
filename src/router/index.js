@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-07 15:58:51
+ * @LastEditTime: 2018-12-21 10:20:02
  * @Description: 
  */
 
@@ -12,7 +12,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // 页面布局
-import Layout from '@/views/layout/lauout.vue'
+import Layout from '@/views/layout/layout.vue'
 
 export const constantRouterMap = [
   {
