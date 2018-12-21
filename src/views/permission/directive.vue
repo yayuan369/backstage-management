@@ -1,5 +1,5 @@
 <template>
-  <div>后视镜快车道</div>
+  <div class="app-container">后视镜快车道</div>
 </template>
 
 <script>

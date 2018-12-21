@@ -1,5 +1,5 @@
 <template>
-  <div>我是401</div>
+  <div class="app-container">我是401</div>
 </template>
 
 <script>
