@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-21 10:20:02
+ * @LastEditTime: 2018-12-21 11:04:21
  * @Description: 
  */
 
@@ -60,7 +60,7 @@ export const asyncRouterMap = [
     path:'/permission',
     name:'permission',  //设定路由的名字，一定要填写不然使用<keep-alive>时会出现各种问题
     component:Layout,
-    redirect:'/permission/index',//重定向地址，在面包屑中点击会重定向去的地址
+    redirect:'/permission/directive',//重定向地址，在面包屑中点击会重定向去的地址
     alwaysShow:true,  //设置 alwaysShow: true，它就会忽略之前定义的规则，一直显示根路由
     meta:{
       title:'权限', //设置该路由在侧边栏和面包屑中展示的名字
@@ -89,25 +89,25 @@ export const asyncRouterMap = [
         }
       }
     ]
-
   },
   {
     path: '/example',
     name: 'Example',
     component: Layout,
-    redirect: '/example/tree',
+    redirect: '/example/icons',
+    alwaysShow:true,
     meta: {
-      title: 'Example',
+      title: '零星栗子',
       icon: '#icon-daizhenhuanzhe',
       roles:['admin','editor'],
     },
     children: [
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/example/tree/index'),
+        path: 'icons',
+        name: 'Icons',
+        component: () => import('@/views/example/icons/index'),
         meta: {
-          title: 'Tree', //设置该路由在侧边栏和面包屑中展示的名字
+          title: 'Icons', //设置该路由在侧边栏和面包屑中展示的名字
           icon: '#icon-huiyuanquanyi', //设置该路由的图标
           roles:['admin','editor']
         }
