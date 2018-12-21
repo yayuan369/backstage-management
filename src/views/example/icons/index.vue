@@ -31,7 +31,7 @@ export default {
 
   methods: {
     generateIconCode(symbol) {
-      return 'svg-icon ' + symbol;
+      return symbol;
     },
     handleClipboard(text, event) {
       clipboard(text, event)
