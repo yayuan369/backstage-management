@@ -67,7 +67,7 @@ export default {
 .code {
   width: 100%;
   padding: 0;
-  height: 40px;
+  height: 50px;
   font-size: 35px;
   overflow: hidden;
   border: none;
@@ -87,14 +87,14 @@ export default {
   -webkit-tap-highlight-color: transparent; // 解决ios点击灰色阴影的问题
 }
 .label {
-  height: 34px;
+  height: 40px;
+  line-height: 20px;
   width: 12%;
   border-bottom: 2px  #bdb9b9 solid;
   float: left;
   color: #313131;
   font-size: 35px;
   text-align: center;
-  padding-bottom: 4px;
 }
 .active{
   border-bottom-color: #2678e4;
@@ -103,8 +103,9 @@ export default {
   // 伪类实现光标效果
   content: " ";
   display: inline-block;
-  height: 100%;
   width: 2px;
+  // height: 100%;
+  height: 26px;
   background: #313131;
   animation: 0.8s animate infinite;
 }
