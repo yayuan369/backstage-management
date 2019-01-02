@@ -79,7 +79,7 @@ export default {
   }
 }
 .loading1 span:nth-child(1) {
-  left: 0;
+  left: 2px;
   top: 50%;
   margin-top: -8px;
   animation-delay: 0.13s;
@@ -93,7 +93,7 @@ export default {
 }
 .loading1 span:nth-child(3) {
   left: 50%;
-  top: 0;
+  top: 5px;
   margin-left: -8px;
   animation-delay: 0.39s;
   -webkit-animation-delay: 0.39s;
@@ -105,7 +105,7 @@ export default {
   -webkit-animation-delay: 0.52s;
 }
 .loading1 span:nth-child(5) {
-  right: 0;
+  right: 2px;
   top: 50%;
   margin-top: -8px;
   animation-delay: 0.65s;
@@ -118,7 +118,7 @@ export default {
   -webkit-animation-delay: 0.78s;
 }
 .loading1 span:nth-child(7) {
-  bottom: 0;
+  bottom: 5px;
   left: 50%;
   margin-left: -8px;
   animation-delay: 0.91s;
