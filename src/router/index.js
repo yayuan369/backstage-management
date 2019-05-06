@@ -2,7 +2,7 @@
  * @Author: jing lijuan
  * @Date: 2018-11-30 14:20:44
  * @LastEditors: jing lijuan
- * @LastEditTime: 2018-12-28 15:58:54
+ * @LastEditTime: 2019-05-06 14:06:11
  * @Description: 
  */
 
@@ -14,6 +14,8 @@ Vue.use(Router)
 // 页面布局
 import Layout from '@/views/layout/layout.vue'
 
+
+//代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。
 export const constantRouterMap = [{
     path: '/',
     component: Layout,
@@ -42,8 +44,8 @@ export default new Router({
   }),
   routes: constantRouterMap
 })
-// constantRouterMap： 代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。
-//asyncRouterMap： 代表那些需求动态判断权限并通过 addRouters 动态添加的页面。
+// constantRouterMap   代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。
+//asyncRouterMap   代表那些需求动态判断权限并通过 addRouters 动态添加的页面。
 export const asyncRouterMap = [{
     path: '/permission',
     name: 'permission', //设定路由的名字，一定要填写不然使用<keep-alive>时会出现各种问题
@@ -129,7 +131,7 @@ export const asyncRouterMap = [{
       }
     ]
   },
-  //401和404页面
+  //error 页面
   {
     path: '/errorPage',
     name: 'errorPage',
