@@ -40,4 +40,5 @@ import './assets/iconfont/iconfont' //引入iconfont.js
 
 然后整个项目就可以使用这个组件了
 <svg-icon icon-class="icon名称" />
-
+参考
+https://gitee.com/mirrors/vue-admin/
