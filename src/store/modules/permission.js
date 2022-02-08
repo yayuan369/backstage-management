@@ -1,7 +1,4 @@
 import {  asyncRouterMap,  constantRouterMap} from '@/router'
-import {
-  resolve
-} from '../../../node_modules/_uri-js@4.2.2@uri-js';
 
 //   通过meta.role判断是否与当前用户权限匹配
 //   @param roles
